@@ -14,6 +14,7 @@ if [ -x /usr/local/rvm/bin/rvm ]; then
 	echo "### RVM is already installed!"
 	echo
 	echo "### Installed Ruby versions:"
+	echo
 	rvm list
 else
 	echo "### RVM is not installed."
@@ -22,11 +23,14 @@ else
 	echo "### Installing latest stable version of Ruby Version Manager (RVM)..."
 	echo
 	\curl -L https://get.rvm.io | sudo bash -s stable
+	source /etc/profile.d/rvm.sh
 fi
 echo
 
 has_ruby_version=`rvm list | grep -c $RUBY_VERSION`
 if [ $has_ruby_version == "0" ]; then
+	echo "### Installing Ruby version $RUBY_VERSION..."
+	echo
 	rvm install $RUBY_VERSION
 	echo
 else

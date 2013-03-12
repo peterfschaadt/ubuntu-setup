@@ -38,8 +38,21 @@ $ ./<SCRIPT>.sh
 
 ### initial_setup.sh
 
-Perform apt-get update/upgrade and install build-essential, cURL.
+Perform apt-get update/upgrade and install build-essential, cURL, libcurl.
 
 ### set_locale_en_us.sh
 
 Set locale settings to English-United States and UTF-8. Be sure to reboot server afterwards.
+
+### create_user.sh
+
+Create a new Ubuntu user and add to admin group. Be sure to edit sudoers file after creation (```sudo visudo```).
+
+### chef_prep.sh
+
+Install Ruby Version Manager ([RVM](https://rvm.io/)), then install Ruby version 1.9.3-p392.
+
+### chef_install.sh
+
+Install Chef-Solo.
+

@@ -1,5 +1,7 @@
 # Scripts to configure a vanilla Ubuntu (12.04) server
 
+These scripts are for setting up a fresh Ubuntu server before using tools like [Chef](http://www.opscode.com/chef/) or [Puppet](https://puppetlabs.com/) for more advanced configuration and dependency management.
+
 ## Getting Started
 
 Connect to server over SSH

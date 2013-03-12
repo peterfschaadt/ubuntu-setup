@@ -76,3 +76,4 @@ echo
 
 # And we're done
 echo "##### All Finished #####"
+echo

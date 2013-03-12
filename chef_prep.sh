@@ -13,6 +13,7 @@ echo
 if [ -x /usr/local/rvm/bin/rvm ]; then
 	echo "### RVM is already installed!"
 	echo
+	# List installed Ruby versions
 	echo "### Installed Ruby versions:"
 	echo
 	rvm list
@@ -29,9 +30,14 @@ echo
 
 has_ruby_version=`rvm list | grep -c $RUBY_VERSION`
 if [ $has_ruby_version == "0" ]; then
+	# Install specified Ruby version and make it the RVM default
 	echo "### Installing Ruby version $RUBY_VERSION..."
 	echo
 	rvm install $RUBY_VERSION
+	echo
+	echo "### Setting Ruby $RUBY_VERSION to RVM default..."
+	echo
+	rvm alias create default $RUBY_VERSION
 	echo
 else
 	echo "### RVM has already installed Ruby version $RUBY_VERSION"

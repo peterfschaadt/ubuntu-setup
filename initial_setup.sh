@@ -19,10 +19,11 @@ echo
 sudo apt-get install build-essential
 echo
 
-# Install cURL
-echo "### Installing cURL..."
+# Install cURL and libcurl
+echo "### Installing cURL and libcurl..."
 echo
 sudo apt-get install libcurl3
+sudo apt-get install curl
 echo
 
 # And we're done
